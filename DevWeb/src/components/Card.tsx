@@ -14,9 +14,11 @@ const Card = ({ title, date, banner, summary, link, isExternal }: CardProps) => 
         <>
             <div className="banner" style={{ backgroundImage: `url('${banner}')` }}></div>
             <div className="content">
-                <h3>{title.length > 20 && !isExternal ? title.slice(0,20) + '...' : title}</h3>
+                {/* <h3>{title.length > 20 && !isExternal ? title.slice(0,20) + '...' : title}</h3> */}
+                <h3 className='card-title'>{title}</h3>
                 {date && <h4 className="date">{date}</h4>}
-                <h4 className="summary">{summary.slice(0, 100)}...</h4>
+                {/* <h4 className="summary">{summary.slice(0, 100)}...</h4> */}
+                <h4 className="summary">{summary}</h4>
             </div>
         </>
     );

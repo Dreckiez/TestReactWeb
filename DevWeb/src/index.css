@@ -5,12 +5,33 @@ body {
     margin: auto;
     padding-left: 8rem;
     padding-right: 8rem;
-    width: 1024px;
+    max-width: 1024px;
+    /* max-width: 100%; */
     /* font-family: ui-sans-serif, system-ui, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji; */
     font-family: Inter Variable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
     background-color: #151719;
     background-image: url(/images/nnnoise.svg);
 }
+
+/* body {
+    margin: auto;
+    background-color: #151719;
+    font-family: Inter Variable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    background-image: url(/images/nnnoise.svg);
+
+    overflow-x: hidden;
+
+    width: 100%;
+    max-width: 1024px;
+    margin-inline: auto; 
+    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    box-sizing: border-box;
+} */
 
 footer {
     padding: 1.75rem 0;
@@ -237,6 +258,7 @@ main {
     border-style: solid;
     border-width: 1px;
     border-radius: 3px;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -253,6 +275,9 @@ hr {
     padding-bottom: 2.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .banner {
@@ -263,7 +288,10 @@ hr {
 }
 
 .card {
-    height: 376px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 350px;
 }
 
 .banner {
@@ -274,10 +302,16 @@ hr {
     margin: 0;
 }
 
-.card h3 {
+.card h3, .card-title {
     font-weight: 700;
     font-size: 1.5rem;
-    margin: 0;
+    margin: 0 0 0.5rem 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .date {
@@ -292,4 +326,169 @@ hr {
 .summary {
     font-style: italic;
     font-weight: 400;
+    font-size: 1rem;
+    color: rgba(238, 240, 244, 0.8);
+    
+    /* This limits text to 3 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* ========================================= */
+/* MOBILE RESPONSIVENESS (Add to bottom of index.css) */
+/* ========================================= */
+
+@media screen and (max-width: 1050px) {
+    /* 1. Unfix the main container width */
+    body {
+        width: 100%;       /* Use full screen width */
+        padding-left: 2rem; /* Reduce side padding from 8rem to 2rem */
+        padding-right: 2rem;
+        box-sizing: border-box; /* Ensures padding doesn't break width */
+    }
+
+    .PF, .inside-header {
+        width: 100%;       /* Stop forcing 1024px width */
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    /* 1. Switch to 2 Columns for intermediate screens */
+    #blogs-posts-cards, 
+    #projects-posts-cards {
+        grid-template-columns: 1fr 1fr; /* 2 Columns */
+        gap: 2rem; /* Moderate gap */
+    }
+
+    /* 2. Adjust padding so it doesn't touch the edges */
+    body {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    
+    .header {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+.hamburger-btn {
+    display: none; /* Hide button on desktop */
+    background: none;
+    border: none;
+    color: #e8eef2;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    /* 2. Fix the Header */
+
+    #header-blur {
+        top: 0;
+    }
+
+    .header {
+        height: auto;
+        padding: 10px 1rem;
+        background-color: rgba(21, 23, 25, 0.95); /* Dark background so text is readable */
+    }
+
+    .inside-header {
+        flex-direction: row; /* Stack Logo and Links vertically */
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 1rem; */
+        width: 100%;
+    }
+
+    .hamburger-btn {
+        display: block;
+        padding: 0.5rem; /* Make clickable area bigger */
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #151719;
+        border-bottom: 1px solid #383d42;
+        padding-bottom: 1rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* .right-nav {
+        margin-left: 0.75rem;
+    } */
+
+    .right-nav {
+        margin: 0;
+        width: 100%;
+        padding: 1rem 0;
+        justify-content: center; /* Center text */
+        border-top: 1px solid rgba(255,255,255,0.05); /* subtle divider */
+    }
+    
+    .right-nav:hover {
+        background-color: rgba(255,255,255,0.05);
+    }
+
+    .text-nav {
+        font-size: 0.9rem; /* Make text slightly smaller to fit */
+    }
+
+    .empty-top {
+        min-height: 120px; /* Adjust spacing below header */
+    }
+
+    /* 3. Stack the Cards (1 Column instead of 3) */
+    #blogs-posts-cards, 
+    #projects-posts-cards {
+        grid-template-columns: 1fr; /* 1 Column */
+        gap: 2rem;
+    }
+
+    /* 4. Resize Typography */
+    .mainheading {
+        font-size: 2.5rem; /* Shrink massive headers */
+        line-height: 1.1;
+    }
+    
+    .subheading {
+        font-size: 1.8rem;
+    }
+
+    .line {
+        margin-top: 5rem; /* Adjust decoration lines */
+    }
+
+    .projline {
+        margin-top: 1.6rem;
+    }
+
+    /* 5. Adjust Profile Section */
+    .PFP-name {
+        font-size: 1.75rem;
+    }
+    
+    .PFP-line {
+        font-size: 1rem;
+        padding: 0 1rem; /* Prevent text touching edges */
+    }
 }
