@@ -4,6 +4,7 @@ import projectsData from '../data/projects.json';
 import ProfileCard from '../components/ProfileCard';
 import TerminalWindow from '../components/TerminalWindow';
 import LogEntry from '../components/LogEntry';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -65,12 +66,12 @@ const Home = () => {
                             ))}
                             
                             <div className="mt-6 flex gap-6 text-sm font-mono">
-                                <a href="/posts" className="text-gray-500 hover:text-blue-400 transition-colors flex items-center gap-2">
+                                <Link to="/posts" className="text-gray-500 hover:text-blue-400 transition-colors flex items-center gap-2">
                                     <span className="text-blue-500">➜</span> cd posts/
-                                </a>
-                                <a href="/projects" className="text-gray-500 hover:text-emerald-400 transition-colors flex items-center gap-2">
+                                </Link>
+                                <Link to="/projects" className="text-gray-500 hover:text-emerald-400 transition-colors flex items-center gap-2">
                                     <span className="text-emerald-500">➜</span> cd projects/
-                                </a>
+                                </Link>
                             </div>
                         </section>
 
