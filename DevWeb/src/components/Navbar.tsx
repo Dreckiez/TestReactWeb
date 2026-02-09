@@ -42,7 +42,7 @@ const Navbar = () => {
                 <div className='opacity-0 absolute h-full -left-10 -z-10 backdrop-blur-2xl' style={{ opacity: opacity, width: 'calc(100% + 40px)', boxShadow: '0 0 #000, 0 0 #000, 0 25px 50px -12px rgba(0, 0, 0, 0.25)'}}></div>
                 <div className="justify-between items-center flex flex-[0.65] mx-auto max-w-5xl">
                     <nav>
-                        <Link to="/" className="flex text-[#e8eef2] text-[1.4rem] leading-6 font-[650]" onClick={closeMenu}>Dreckiez</Link>
+                        <Link to="/" className="flex text-[#e8eef2] text-[1.4rem] leading-6 font-[650] md:hidden" onClick={closeMenu}>Dreckiez</Link>
                     </nav>
 
                     <nav className="hidden md:flex">
