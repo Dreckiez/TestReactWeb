@@ -1,10 +1,30 @@
 import Navbar from '../components/Navbar';
-// import blogsData from '../data/blogs.json';
-// import projectsData from '../data/projects.json';
+import blogsData from '../data/blogs.json';
+import projectsData from '../data/projects.json';
 import ProfileCard from '../components/ProfileCard';
 import TerminalWindow from '../components/TerminalWindow';
+import LogEntry from '../components/LogEntry';
 
 const Home = () => {
+
+    const parseDate = (dateStr: string) => {
+        const [day, month, year] = dateStr.split('-').map(Number);
+        return new Date(year, month - 1, day);
+    };
+
+    const allLogs = [
+        ...blogsData.map(blog => ({
+            ...blog,
+            type: 'Blog'
+        })),
+        ...projectsData.map(project => ({
+            ...project,
+            type: 'Project'
+        }))
+    ];
+
+    allLogs.sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime());
+
     return (
         <div className='min-h-screen font-segoe text-[#e8eef2] bg-[#151719] bg-fixed' style={{ backgroundImage: 'url(images/nnnoise.svg)' }}>
             <Navbar />
@@ -37,39 +57,19 @@ const Home = () => {
                                 Latest Logs
                             </h2>
                             
-                            {/* Example Blog Card 1 */}
-                            <div className="group mb-4 cursor-pointer">
-                                <div className="flex flex-col sm:flex-row gap-4 p-4 rounded-lg hover:bg-white/5 transition-all border border-transparent hover:border-gray-700">
-                                    <div className="text-gray-500 font-mono text-sm min-w-25">2024-05-12</div>
-                                    <div>
-                                        <h3 className="text-blue-400 font-bold group-hover:text-blue-300 transition-colors">
-                                            Why I moved from Frontend to DevOps
-                                        </h3>
-                                        <p className="text-gray-400 text-sm mt-1">
-                                            Reflecting on my lack of "color sense" and finding my true calling in system architecture...
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Example Project Card 2 */}
-                            <div className="group mb-4 cursor-pointer">
-                                <div className="flex flex-col sm:flex-row gap-4 p-4 rounded-lg hover:bg-white/5 transition-all border border-transparent hover:border-gray-700">
-                                    <div className="text-gray-500 font-mono text-sm min-w-25">Project</div>
-                                    <div>
-                                        <h3 className="text-emerald-400 font-bold group-hover:text-emerald-300 transition-colors">
-                                            Hand-Crafted HTML Blog
-                                        </h3>
-                                        <p className="text-gray-400 text-sm mt-1">
-                                            Building a blog without a generator. Just raw HTML, CSS, and grit.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            {allLogs.slice(0,3).map((log, idx) => (
+                                <LogEntry key={idx} date={log.type === 'Project' ? 'Project' : log.date} title={log.title}
+                                    summary={log.summary}
+                                    type={log.type as "Blog" | "Project"}
+                                    link={log.link}></LogEntry>
+                            ))}
                             
-                            <div className="mt-4">
-                                <a href="/posts" className="text-sm font-mono text-gray-500 hover:text-white transition-colors">
-                                    ➜ View all posts
+                            <div className="mt-6 flex gap-6 text-sm font-mono">
+                                <a href="/posts" className="text-gray-500 hover:text-blue-400 transition-colors flex items-center gap-2">
+                                    <span className="text-blue-500">➜</span> cd posts/
+                                </a>
+                                <a href="/projects" className="text-gray-500 hover:text-emerald-400 transition-colors flex items-center gap-2">
+                                    <span className="text-emerald-500">➜</span> cd projects/
                                 </a>
                             </div>
                         </section>
@@ -79,13 +79,13 @@ const Home = () => {
                             <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4 border-b border-gray-700 pb-2">
                                 System Configuration
                             </h2>
-                            <div className="bg-[#1e2124] rounded-lg p-5 border border-[#2f3136] overflow-x-auto shadow-inner group hover:border-gray-600 transition-colors">
-                                <pre className="font-mono text-sm leading-6">
+                            <div className="bg-[#1e2124] rounded-lg p-5 border border-[#2f3136] shadow-inner group hover:border-gray-600 transition-colors w-full">
+                                <pre className="font-mono text-xs md:text-sm leading-relaxed whitespace-pre-wrap wrap-break-words">
                                     <code>
                                         <span className="text-pink-400">current_stack:</span>{'\n'}
-                                        <span className="text-blue-300">  core:</span>        <span className="text-yellow-300">[</span>"C++", "Linux", "Bash"<span className="text-yellow-300">]</span>{'\n'}
-                                        <span className="text-blue-300">  web:</span>         <span className="text-yellow-300">[</span>"React", "NextJS", "Tailwind"<span className="text-yellow-300">]</span>{'\n'}
-                                        <span className="text-blue-300">  learning:</span>    <span className="text-yellow-300">[</span>"Jenkins", "Docker", "AWS", "CI/CD"<span className="text-yellow-300">]</span>
+                                        <span className="text-blue-300">  frontend:</span> <span className="text-yellow-300">[</span>"React", "NextJS", "Tailwind"<span className="text-yellow-300">]</span>{'\n'}
+                                        <span className="text-blue-300">  languages:</span><span className="text-yellow-300">[</span>"TypeScript", "C++", "Python", "Java"<span className="text-yellow-300">]</span>{'\n'}
+                                        <span className="text-blue-300">  learning:</span> <span className="text-yellow-300">[</span>"DevOps", "Docker", "AWS", "Linux"<span className="text-yellow-300">]</span>
                                     </code>
                                 </pre>
                             </div>
