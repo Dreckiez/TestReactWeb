@@ -1,8 +1,9 @@
 import Navbar from '../../components/Navbar';
+import { Link } from 'react-router-dom';
 
 const SurvivingSophomore = () => {
     return (
-        <div className='min-h-screen font-segoe text-[#e8eef2] bg-[#151719] bg-fixed' style={{ backgroundImage: 'url(images/nnnoise.svg)' }}>
+        <div className='min-h-screen font-segoe text-[#e8eef2] bg-[#151719] bg-fixed' style={{ backgroundImage: 'url(../images/nnnoise.svg)' }}>
             <Navbar />
 
             {/* Main Container: Centered, Reading Width, No Sidebar */}
@@ -10,9 +11,9 @@ const SurvivingSophomore = () => {
                 
                 {/* 1. Navigation: The "Back" Command */}
                 <div className="mb-8">
-                    <a href="/posts" className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-mono transition-colors group">
+                    <Link to="/posts" className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-mono transition-colors group">
                         <span className="text-blue-400 group-hover:-translate-x-1 transition-transform">➜</span> cd ..
-                    </a>
+                    </Link>
                 </div>
 
                 {/* 2. The "VIM" Window */}
@@ -43,8 +44,8 @@ const SurvivingSophomore = () => {
                         <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
                             
                             {/* Main Banner Image */}
-                            <div className="mb-8 rounded-lg overflow-hidden border border-[#2f3136] shadow-lg">
-                                <img src="images/posts/Sep.jpg" alt="Travel Pic" className="w-full h-auto object-cover" />
+                            <div className="mb-8 rounded-lg h-100 overflow-hidden border border-[#2f3136] shadow-lg">
+                                <img src="../images/posts/Sep.jpg" alt="Travel Pic" className="w-full h-full object-cover object-center" />
                             </div>
 
                             <p>
@@ -71,7 +72,7 @@ const SurvivingSophomore = () => {
 
                             {/* Inline Image */}
                             <figure className="my-8">
-                                <img src="images/posts/stonks.jpg" alt="Stonks meme" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
+                                <img src="../images/posts/stonks.jpg" alt="Stonks meme" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
                                 <figcaption className="text-center text-sm text-gray-500 mt-2 font-mono italic">1$/h was OK? I guess</figcaption>
                             </figure>
 
@@ -95,7 +96,7 @@ const SurvivingSophomore = () => {
                             </p>
                             
                             <figure className="my-8">
-                                <img src="images/posts/StormsComing.jpeg" alt="Storm Vergil Meme" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
+                                <img src="../images/posts/StormsComing.jpeg" alt="Storm Vergil Meme" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
                             </figure>
 
                             {/* Section 3 */}
@@ -114,7 +115,7 @@ const SurvivingSophomore = () => {
                             </p>
 
                             <figure className="my-8">
-                                <img src="images/posts/ModernFE.webp" alt="Frontend Meme" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
+                                <img src="../images/posts/ModernFE.webp" alt="Frontend Meme" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
                             </figure>
 
                             <p>
@@ -142,7 +143,7 @@ const SurvivingSophomore = () => {
                             </blockquote>
 
                             <figure className="my-8">
-                                <img src="images/posts/sweat.png" alt="Fate Meme" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
+                                <img src="../images/posts/sweat.png" alt="Fate Meme" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
                             </figure>
 
                             {/* Final Section */}
