@@ -38,7 +38,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="h-25 left-0 right-0 fixed justify-between flex z-100 flex-1 py-0 px-6">
+            <div className="h-20 left-0 right-0 fixed justify-between flex z-100 flex-1 py-0 px-6">
                 <div className='opacity-0 absolute h-full -left-10 -z-10 backdrop-blur-2xl' style={{ opacity: opacity, width: 'calc(100% + 40px)', boxShadow: '0 0 #000, 0 0 #000, 0 25px 50px -12px rgba(0, 0, 0, 0.25)'}}></div>
                 <div className="justify-between items-center flex flex-[0.65] mx-auto max-w-5xl">
                     <nav>

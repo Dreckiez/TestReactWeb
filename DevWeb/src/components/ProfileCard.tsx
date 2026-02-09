@@ -20,8 +20,8 @@ const ProfileCard = () => {
 
                 {/* Social Links (Simple Text/Emoji version) */}
                 <div className="flex justify-center gap-4 mb-6">
-                    {contactsData.map((item) => (
-                        <a href={`${item.href}`} className='text-gray-400 hover:text-white transition-colors text-xl' title ={`${item.title}`} target="_blank">
+                    {contactsData.map((item, idx) => (
+                        <a key={idx} href={`${item.href}`} className='text-gray-400 hover:text-white transition-colors text-xl' title ={`${item.title}`} target="_blank">
                             <i className={`${item.class}`} ></i>
                         </a>
                     ))}
