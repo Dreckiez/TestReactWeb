@@ -3,9 +3,7 @@
         "id": 3,
         "title": "Surviving Sophomore Year",
         "date": "25-09-2025",
-        "banner": "images/posts/Sep.jpg",
         "summary": "Lots of first things",
-        "content": "Looking back at sophomore year, I can honestly say that it was a rollercoaster ride of events that pushed me well beyond my comfort level and eventually to the determination of what would become my academic path.",
         "slug": "surviving-sophomore",
         "link": "/posts/surviving-sophomore"
     },
@@ -13,18 +11,16 @@
         "id": 2,
         "title": "First-Ever Game Jam",
         "date": "12-02-2025",
-        "banner": "images/posts/GGJVN.jpg",
         "summary": "How I make a game with zero experience",
-        "content": "Some time ago, I participated in a new experience I had never previously had — my first-ever game jam. Having just 36 hours to generate ideas, design, and completely develop a game, I knew it was going to be an experience to remember. As an individual who has previously struggled to come up with ideas for a game, I was relieved but nervous about the outcome. Would my team and I manage to pull something together within hours? Or would we crash and burn under the pressure?",
+        "slug": "game-jam",
         "link": "/posts/game-jam"
     },
     {
         "id": 1,
         "title": "My Freshman Year",
         "date": "09-01-2025",
-        "banner": "images/posts/HCMUS.png",
         "summary": "Embarking on a journey",
-        "content": "Hi, welcome to my first blog! I've created this website and these (upcoming) blogs for a single purpose: honing my programming skills, knowledge and sharing my experiences as an IT student with a bit of C++ background from high school. <br> So, a little bit about me and how I got into HCMUS. I've always been pretty good at Physics, Math, English, and Informatics (where I learned about Pascal and C++), but I was never really passionate about any of them. That remained the case until grade 12, when I needed to decide on my major. At first, I considered majoring in English Language, as I had already won some English prizes and scored 7.5 on my IELTS. But then I realized I should pursue IT, since it's a high-paying and trending field.",
+        "slug": "freshman-year",
         "link": "/posts/freshman-year"
     }
 ]

@@ -15,7 +15,7 @@ const SurvivingSophomore = () => {
                     </Link>
                 </div>
 
-                <NVim filename='surviving_sophomore' title='Surviving Sophomore Year' date='25-09-2025' time='10 mins read'>
+                <NVim filename='surviving_sophomore' title='Surviving Sophomore Year' date='25-09-2025' time='13 mins read'>
                     
                     <p className="text-xl text-gray-400 italic leading-relaxed max-w-2xl mb-8 mx-auto">
                         Reflecting on a year of extremes: from working part-time to deep-diving into frontend framework and struggling with advanced math. Here is how Sophomore year defined my path in Software Engineering.
@@ -57,10 +57,10 @@ const SurvivingSophomore = () => {
                     </div>
 
                     <p>
-                        Second semester was quiet, but the third semester hit like a <span className="font-bold text-red-400">motherf**k*ng truck</span>.
+                        Second semester was quiet, but the third semester hit like a <span className="font-bold text-red-400">MOTHERF**K*NG TRUCK</span>.
                     </p>
                     <p>
-                        This was my first real encounter with modern web engineering. I moved past basic HTML/CSS and started building large-scale applications with <span className="text-blue-300">React, Next.js, and TypeScript</span>.
+                        This was my first real encounter with modern web engineering. I moved past basic HTML/CSS and started building large-scale applications with <span className="text-blue-400">React, Next.js, and TypeScript</span>.
                     </p>
 
                     <div className="pl-4 border-l-2 border-gray-700 my-4 italic text-gray-400">
