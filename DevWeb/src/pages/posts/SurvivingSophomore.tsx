@@ -176,6 +176,16 @@ const SurvivingSophomore = () => {
                     </p>
                 </NVim>
 
+                <div className="flex justify-between items-center mt-12 mb-4">
+                    <Link to="/posts/game-jam" className="group flex flex-col items-start text-left">
+                        <span className="text-gray-500 text-xs font-mono mb-1">&lt; Prev Post</span>
+                        <span className="text-blue-400 font-bold group-hover:text-blue-300 transition-colors">
+                            First-Ever Game Jam
+                        </span>
+                    </Link>
+
+                </div>
+
             </div>
         </div>
     );

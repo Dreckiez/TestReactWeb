@@ -226,6 +226,22 @@ const GameJam = () => {
                     </p>
                 </NVim>
 
+                <div className="flex justify-between items-center mt-12 mb-4">
+                    <Link to="/posts/freshman-year" className="group flex flex-col items-start text-left">
+                        <span className="text-gray-500 text-xs font-mono mb-1">&lt; Prev Post</span>
+                        <span className="text-blue-400 font-bold group-hover:text-blue-300 transition-colors">
+                            My Freshman Year
+                        </span>
+                    </Link>
+
+                    <Link to="/posts/surviving-sophomore" className="group flex flex-col items-end text-right">
+                        <span className="text-gray-500 text-xs font-mono mb-1">Next Post &gt;</span>
+                        <span className="text-emerald-400 font-bold group-hover:text-emerald-300 transition-colors">
+                            Surviving Sophomore Year
+                        </span>
+                    </Link>
+                </div>
+
             </div>
         </div>
     );

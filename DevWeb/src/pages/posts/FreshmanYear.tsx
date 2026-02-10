@@ -10,7 +10,6 @@ const FreshmanYear = () => {
 
             <div className="max-w-4xl mx-auto px-6 pt-32 pb-12">
                 
-                {/* Navigation */}
                 <div className="mb-8">
                     <Link to="/posts" className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-mono transition-colors group">
                         <span className="text-blue-400 group-hover:-translate-x-1 transition-transform">➜</span> cd ..
@@ -19,17 +18,14 @@ const FreshmanYear = () => {
 
                 <NVim filename='freshman_year' title='My Freshman Year' date='09-01-2025' time='22 mins read'>
                     
-                    {/* Intro Subtitle */}
                     <p className="text-xl text-gray-400 italic leading-relaxed max-w-2xl mb-8 mx-auto">
                         From sleeping through my first exam (literally) to coding a Pikachu clone and enjoying military training. A retrospective on my chaotic start at HCMUS.
                     </p>
 
-                    {/* Banner */}
                     <div className="mb-8 rounded-lg h-96 overflow-hidden border border-[#2f3136] shadow-lg">
                         <img src="../images/posts/HCMUS.png" alt="HCMUS Campus" className="w-full h-full object-cover object-center" />
                     </div>
 
-                    {/* Section 1 */}
                     <div className="mt-12 mb-6">
                         <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                             <span className="text-emerald-400 text-base">##</span> Origin Story: Getting into HCMUS
@@ -53,7 +49,6 @@ const FreshmanYear = () => {
                         To be honest, I didn't think I'd get in. I was literally preparing my paperwork for my second choice (HCMUT), when a friend texted me to check the scores. Miraculously, I passed by the skin of my teeth.
                     </p>
 
-                    {/* Section 2 */}
                     <div className="mt-12 mb-6">
                         <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                             <span className="text-emerald-400 text-base">##</span> Semester 1: The "Wake Up" Call
@@ -115,7 +110,6 @@ const FreshmanYear = () => {
                         <figcaption className="text-center text-sm text-gray-500 mt-2 font-mono italic">A scene in the film.</figcaption>
                     </figure>
 
-                    {/* Section 3 */}
                     <div className="mt-12 mb-6">
                         <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                             <span className="text-emerald-400 text-base">##</span> Semester 2: Redemption Arc
@@ -154,7 +148,6 @@ const FreshmanYear = () => {
                         </p>
                     </div>
 
-                    {/* EVENT 2: The Design Contest */}
                     <div className="mt-10 mb-6">
                         <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
                             <span className="text-yellow-400 text-sm">###</span> Event: Design Contest
@@ -168,7 +161,6 @@ const FreshmanYear = () => {
                             We passed the first round with our shotlist, but when it came time to film for Round 2, we had a debuff:
                         </p>
 
-                        {/* The "Debuff" Block */}
                         <div className="pl-4 border-l-2 border-red-500/50 my-4 text-gray-400 italic">
                             <p>
                                 I was stuck in my hometown. My team had to handle the entire shoot without me. (Carried by team <span className="not-italic text-emerald-400">orz</span>).
@@ -179,7 +171,6 @@ const FreshmanYear = () => {
                             Despite the chaos, the final product was solid enough to secure <span className="text-yellow-400 font-bold">2nd Place!</span> 🏆
                         </p>
 
-                        {/* THE MISSING IMAGE (Add this back!) */}
                         <figure className="my-8">
                             <img src="../images/posts/OutrSpace.png" alt="Capybara Project" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
                             <figcaption className="text-center text-sm text-gray-500 mt-2 font-mono italic">
@@ -188,7 +179,6 @@ const FreshmanYear = () => {
                         </figure>
                     </div>
 
-                    {/* Section 4 */}
                     <div className="mt-12 mb-6">
                         <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                             <span className="text-emerald-400 text-base">##</span> Semester 3: The Difficulty Spike
@@ -210,7 +200,6 @@ const FreshmanYear = () => {
                         Learning <b>Data Structures & Algorithms</b> was going great... except the <b><i>Time Complexity</i></b> part:
                     </p>
 
-                    {/* The "Confusion" Block */}
                     <div className="pl-4 border-l-2 border-purple-500/50 my-4 bg-purple-500/5 p-3 rounded-r-lg">
                         <code className="text-purple-300 font-mono text-lg block mb-2">
                             &gt; Calculate the Time Complexity (Big O) of this recursive function.
@@ -231,7 +220,6 @@ const FreshmanYear = () => {
                         <b>Computer Networking</b> was the wild card. I had zero clue what was happening in the lectures (OSI? Switch?), but the practical labs were surprisingly interesting.
                     </p>
 
-                    {/* The "New Skill" Block */}
                     <div className="mt-8 mb-4">
                         <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
                             <span className="text-emerald-400 text-sm">&gt;&gt;&gt;</span> New Skill Acquired: Python Socket
@@ -246,7 +234,6 @@ const FreshmanYear = () => {
                         <figcaption className="text-center text-sm text-gray-500 mt-2 font-mono italic">It works on my machine.</figcaption>
                     </figure>
 
-                    {/* Bonus Section */}
                     <div className="mt-12 mb-6">
                         <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                             <span className="text-emerald-400 text-base">##</span> Bonus: Military Training Arc
@@ -343,6 +330,15 @@ const FreshmanYear = () => {
                     </p>
 
                 </NVim>
+
+                <div className="flex justify-end mt-12 mb-4">
+                    <Link to="/posts/game-jam" className="group flex flex-col items-end text-right">
+                        <span className="text-gray-500 text-xs font-mono mb-1">Next Post &gt;</span>
+                        <span className="text-emerald-400 font-bold group-hover:text-emerald-300 transition-colors">
+                            First-Ever Game Jam
+                        </span>
+                    </Link>
+                </div>
 
             </div>
         </div>
