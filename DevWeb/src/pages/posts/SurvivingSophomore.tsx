@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar';
 import NVim from '../../components/NVim';
 import { Link } from 'react-router-dom';
+import SkillUnlockCard from '../../components/SkillUnlockCard';
 
 const SurvivingSophomore = () => {
     return (
@@ -39,6 +40,15 @@ const SurvivingSophomore = () => {
                     <p>
                         The job itself was a reality check. While my coworkers were amazing and patient, the work made me miserable. Having to learn products that I don't care about and promoting sales on Facebook was something that I, as a <span className="italic text-gray-400">ghost user</span>, couldn't handle that long.
                     </p>
+
+                    <div className="pl-4 border-l-2 border-purple-500/50 my-6 bg-purple-500/5 p-3 rounded-r-lg">
+                        <h4 className="font-bold text-purple-400 mb-1">📉 Status Effect: Social Battery Drain</h4>
+                        <ul className="text-sm text-gray-400 font-mono space-y-1">
+                            <li>- Charisma (I hate cold calling)</li>
+                            <li>- Stamina (Talking to humans is hard)</li>
+                            <li>+ Gold (At least I got paid)</li>
+                        </ul>
+                    </div>
                     
                     <figure className="my-8">
                         <img src="../images/posts/stonks.jpg" alt="Stonks meme" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
@@ -86,6 +96,14 @@ const SurvivingSophomore = () => {
                         Simultaneously, my <i>"Applied Maths for IT"</i> course humbled me. I went from implementing basic matrix operations to coding "homemade" regression algorithms from scratch. There were nights where I stared at Ridge and Lasso regression formulas wondering if I was in the wrong major.
                     </p>
 
+                    <div className="pl-4 border-l-2 border-red-500/50 my-4 bg-red-500/5 p-3 rounded-r-lg">
+                        <h4 className="font-bold text-red-400 mb-1">💥 Critical Hit: Math Damage</h4>
+                        <p className="text-gray-400 italic text-sm">
+                            Staring at Lasso Regression formulas at 2 AM.<br/>
+                            HP: 1/100.
+                        </p>
+                    </div>
+
                     <p>
                         But pushing through that math-heavy logic reinforced my understanding of how Computer Science got to this day <span className="text-emerald-400">from just pure math.</span>
                     </p>
@@ -103,21 +121,24 @@ const SurvivingSophomore = () => {
                     <p>
                         I briefly considered Computer Vision, but the math-heavy projects from last semester reminded me that while I <i>can</i> do math, I don't <i>love</i> it. I realized my dopamine hit comes from building functional systems.
                     </p>
-
-
-                    <figure className="my-8">
-                        <img src="../images/posts/sweat.png" alt="Fate Meme" className="rounded-lg border border-[#2f3136] mx-auto max-w-full md:max-w-md" />
-                    </figure>
                     
                     <blockquote className="border-l-4 border-blue-500/50 pl-4 py-2 my-8 italic text-gray-400 bg-blue-500/5 rounded-r-lg">
                         "Coding is what I'm actually good at. I love the genuine satisfaction of seeing an app I built actually <b>work</b>."
                     </blockquote>
+                    
+                    <div className="border border-emerald-500/30 bg-emerald-500/5 p-4 rounded-lg my-8 text-center">
+                        <h4 className="text-emerald-400 font-bold uppercase tracking-widest text-xs mb-2">Class Selection</h4>
+                        <div className="text-2xl font-bold text-white mb-1">Software Engineer</div>
+                        <div className="text-gray-400 text-sm italic mb-4">"Builder of Tools. Automator of Workflows."</div>
+                        <button className="bg-emerald-600/20 text-emerald-300 border border-emerald-500/50 px-4 py-1 rounded text-sm hover:bg-emerald-600/30 transition-colors cursor-default">
+                            [ CONFIRMED ]
+                        </button>
+                    </div>
 
                     <p>
                         I chose <span className="text-emerald-400 font-bold">Software Engineering</span> because it fits my mindset. I want to build tools, automate workflows, and create tangible products.
                     </p>
 
-                    {/* Section 4: Future */}
                     <div className="mt-12 mb-6">
                         <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                             <span className="text-emerald-400 text-base">##</span> Next Target: DevOps
@@ -128,11 +149,30 @@ const SurvivingSophomore = () => {
                     <p>
                         Now that I’ve committed to the path, I’m narrowing my focus. I plan to specialize in <span className="text-emerald-400 font-bold">DevOps</span> for my junior year.
                     </p>
-                    <p>
-                        I want to bridge the gap between "it works on my machine" and "it works in production." I’m diving into Docker, Kubernetes, and AWS to understand the infrastructure that powers the code I write. It’s a steep learning curve, but I’m ready for it.
-                    </p>
+
+                    <SkillUnlockCard>
+                        <div>
+                            <h4 className="text-gray-400 text-sm font-bold uppercase mb-2 tracking-wider">Main Quests</h4>
+                            <ul className="space-y-2 text-sm font-mono text-gray-300">
+                                <li>🐳 <span className="text-blue-300">Docker:</span> Containerization</li>
+                                <li>☸️ <span className="text-blue-300">K8s:</span> Orchestration</li>
+                                <li>☁️ <span className="text-orange-300">AWS:</span> Cloud Infrastructure</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 className="text-gray-400 text-sm font-bold uppercase mb-2 tracking-wider">Objective</h4>
+                            <p className="text-sm text-gray-400 italic leading-relaxed">
+                                "Automate everything. If I have to do it twice, write a script."
+                            </p>
+                        </div>
+                    </SkillUnlockCard>
+
                     <p>
                         Junior year is going to be intense, but at least now I know exactly where I'm going.
+                    </p>
+
+                    <p className="mt-6 text-xl font-bold text-emerald-400">
+                        Loading Level 3 (Junior Year)... <span className="animate-pulse">_</span>
                     </p>
                 </NVim>
 
